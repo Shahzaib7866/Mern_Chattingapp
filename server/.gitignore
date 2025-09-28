@@ -1,0 +1,12 @@
+# Dependencies
+node_modules
+
+# Environment variables
+.env
+
+# Other common ignored items (optional, but recommended)
+/dist
+*.log
+.DS_Store
+
+

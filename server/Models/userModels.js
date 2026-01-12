@@ -1,22 +1,21 @@
 import mongoose from "mongoose";
 
 
-// Define the User Schema
+
 const userSchema = new mongoose.Schema(
     {
          fullname: {
             type: String,
-            required: [true, 'Please add a username'], // Must be provided
-            unique: true, // No two users can have the same username
-            trim: true, // Removes whitespace from both ends
+            required: [true, 'Please add a username'], 
+            trim: true,
         },
        
         username: {
             type: String,
-            required: [true, 'Please add a username'], // Must be provided
-            unique: true, // No two users can have the same username
-            trim: true, // Removes whitespace from both ends
-            minlength: 3, // Minimum length of 3 characters
+            required: [true, 'Please add a username'],
+            unique: true, 
+            trim: true, 
+            minlength: 3, 
         },
         
         email: {
@@ -27,44 +26,39 @@ const userSchema = new mongoose.Schema(
             match: [
                 /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
                 'Please fill a valid email address'
-            ], // Simple regex for email validation
+            ],
         },
 
             gender: {
             type: String,
-            required: [true, 'Please add an email'],
-             enum: ['male','female'],
-            unique: true,
-            trim: true,
-         
+            enum: ['male','female'],         
         },
         
         password: {
             type: String,
             required: [true, 'Please add a password'],
-            minlength: 6, // Enforcing a minimum security standard
+            minlength: 6, 
         },
 
        
         isAdmin: {
             type: Boolean,
-            default: false, // Default role is a regular user
+            default: false,
         },
 
             profilepic: {
             type: String,
             required: true,
-            default: "" //koi user profilepic nhi lagana chhahta
+            default: ""
         },
 
     },
     {
-        // Mongoose automatically adds `createdAt` and `updatedAt` timestamps
         timestamps: true, 
     }
 );
 
-// Create the model from the schema and export it
 const User = mongoose.model('User', userSchema);
 
-module.exports = User;
+export default User
+

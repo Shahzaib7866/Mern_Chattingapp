@@ -5,9 +5,9 @@ import router from "./routes/authUser.js";
 
 
 const app = express();
-
 dotenv.config();
 
+app.use(express.json());
 app.use('/api/auth', router);
 
 const PORT = process.env.PORT;
@@ -25,3 +25,17 @@ app.listen(PORT, () => {
     
 })
 
+
+
+//indexOf
+// function indexof (arr, value){
+//     for (let i=0; i< arr.length; i++)
+//         if(arr[i] === value){
+//             return i;
+
+// }
+// return -1
+// }
+
+
+//map

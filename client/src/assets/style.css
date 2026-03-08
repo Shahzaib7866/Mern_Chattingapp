@@ -1,0 +1,40 @@
+
+
+/* In your global CSS file or a new Layout.css */
+
+.app-container {
+    display: flex;
+    /* This puts Sidebar and Main Content side-by-side */
+    height: 100vh;
+    /* Full viewport height */
+    width: 100vw;
+    /* Full viewport width */
+    overflow: hidden;
+    /* Prevents double scrollbars */
+}
+
+.sidebar {
+    width: 80px;
+    /* Adjust based on your design */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    /* Example color */
+}
+
+.main-content {
+    flex-grow: 1;
+    /* Takes up all remaining space */
+    height: 100%;
+    overflow-y: auto;
+    /* Allows the home/chat area to scroll independently */
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}

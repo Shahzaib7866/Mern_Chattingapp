@@ -1,8 +1,11 @@
 import React from 'react'
+import '../assets/style.css'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div className='home'>
+      <h3>Chats</h3>
+    </div>
   )
 }
 

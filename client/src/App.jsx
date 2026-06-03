@@ -2,11 +2,13 @@
 
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 
-import Home from './components/Home';
 import Login from './components/auth/Login';
-import Navbar from './components/Navbar';
+// import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import '../src/assets/style.css'
+import Chats from './pages/Chats';
+import Groups from './pages/Groups';
+import Calls from './pages/Calls';
 
 
 // 1. Create a Layout component
@@ -30,7 +32,9 @@ function App() {
 
         {/* Routes WITH Navbar */}
         <Route element={<MainLayout />}>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Chats />} />
+          <Route path="/groups" element={<Groups />} />
+          <Route path="/calls" element={<Calls />} />
           {/* Add more routes here that need the Navbar */}
         </Route>
       </Routes>

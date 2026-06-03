@@ -32,9 +32,77 @@
     /* Allows the home/chat area to scroll independently */
 }
 
+/* chats page styling */
 .home {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+    height: 100vh; /* Fill the parent container */
+    width: 100%;
 }
+
+.chat-list {
+    flex: 0 0 300px; /* Fixed width sidebar area */
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+}
+
+.chat-window {
+    flex: 1; /* Takes all remaining available space */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.messages {
+    flex-grow: 1; /* Pushes input to the bottom */
+    overflow-y: auto;
+    padding-bottom: 20px;
+}
+
+/* Remove the hardcoded divider div and use CSS border-right on .chat-list 
+   or margin for cleaner DOM structure */
+.divider {
+    width: 1px;
+    background-color: #e5e7eb;
+}
+
+
+/* Sidebar styling */
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%; /* Makes the background circular */
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  color: #555; /* Icon color */
+  text-decoration: none;
+}
+
+.icon-wrapper:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Slightly dark hover effect */
+}
+
+.sidebar-svg {
+  font-size: 24px !important;
+}
+
+.top-icons, .bottom-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px; /* Spacing between icons */
+  padding: 4px 0;
+}
+
+.logo {
+  width: 40px;
+  margin-bottom: 4px;
+}
+
+
+

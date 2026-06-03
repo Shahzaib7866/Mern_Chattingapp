@@ -19,7 +19,7 @@ const Sidebar = () => {
     <div className='sidebar'>
       <div className='top-icons'>
         <img src={logochat} alt="Logo" className="logo" />
-        <SidebarIcon icon={ChatIcon} to="/chats" />
+        <SidebarIcon icon={ChatIcon} to="/" />
         <SidebarIcon icon={LocalPhoneIcon} to="/calls" />
         <SidebarIcon icon={GroupIcon} to="/groups" />
       </div>

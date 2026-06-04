@@ -6,6 +6,7 @@ import { useEffect, useRef } from 'react';
 import PersonIcon from '@mui/icons-material/Person';
 import ChatList from '../components/ChatList';
 import MessagesWindow from '../components/MessagesWindow';
+// import ChatHeader from '../components/ChatHeader';
 
 const Chats = () => {
 
@@ -68,7 +69,9 @@ const Chats = () => {
   <div className="divider"></div>
 
   {/* Right Section: Chat Window */}
+  {/* <ChatHeader /> */}
 <MessagesWindow />
+
 
 
 </div>

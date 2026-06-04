@@ -9,18 +9,20 @@ import '../src/assets/style.css'
 import Chats from './pages/Chats';
 import Groups from './pages/Groups';
 import Calls from './pages/Calls';
+import ChatHeader from './components/ChatHeader';
 
 
 // 1. Create a Layout component
 const MainLayout = () => (
-  <>
   <div className="app-container">
     <Sidebar />
-    <div className="main-content">
-      <Outlet /> 
+    <div className="flex flex-col flex-1">
+      <ChatHeader /> {/* If you want it here, it will be always visible */}
+      <div className="main-content">
+        <Outlet /> 
+      </div>
     </div>
-  </div> {/* This is where the Home/other components will render */}
-  </>
+  </div>
 );
 
 function App() {
